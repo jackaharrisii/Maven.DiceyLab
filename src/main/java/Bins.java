@@ -1,9 +1,35 @@
 
 public class Bins {
-/*
-    Bins results = new Bins(2, 12); // for bins from 2..12
-    Integer numberOfTens = results.getBin(10); //returns the number of tens in the 10 bin
-    results.incrementBin(10); // should increment bin #10
-}
-*/
+
+    private int min;
+    private int max;
+    private int[] counter;
+
+
+    public int getMin() {
+        return min;
+    }
+
+    public int getMax() {
+        return max;
+    }
+
+    public int[] getCounter() {
+        return counter;
+    }
+
+    public Bins(int min, int max){
+        this.min = min;
+        this.max = max;
+        this.counter = new int[max+1];
+    }
+
+    public Integer getBin(int binIndex){
+        return counter[binIndex];
+    }
+
+    public void incrementBin(int binIndex){
+        counter[binIndex]++;
+    }
+
 }

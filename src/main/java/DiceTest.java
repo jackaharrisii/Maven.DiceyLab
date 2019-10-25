@@ -9,7 +9,7 @@ public class DiceTest {
         Dice dice = new Dice();
         Boolean expected = true;
         Boolean actual;
-        int dice1 = dice.tossAndSum();
+        int dice1 = dice.tossAndSum(2, 1, 6);
 //  this didn't work --->  if(dice.tossAndSum() >= 1 && dice.tossAndSum() <=6){
         // doing it this way was rolling the die twice
         //it was rolling for each comparison
@@ -20,6 +20,21 @@ public class DiceTest {
         else { actual = false; }
     }
 
+    @Test
+    public void tossAndSumTest2(){
+        Dice dice = new Dice();
+        Boolean expected = true;
+        Boolean actual;
+        int dice1 = dice.tossAndSum(3, 1, 8);
+//  this didn't work --->  if(dice.tossAndSum() >= 1 && dice.tossAndSum() <=6){
+        // doing it this way was rolling the die twice
+        //it was rolling for each comparison
+        // solution was to roll before the if statement, then call the variable
+        if (dice1 >= 1 && dice1 <= 6){
+            actual = true;
+        }
+        else { actual = false; }
+    }
 /*    @Test
     public void tossAndSumTest(){
         Dice dice = new Dice();
