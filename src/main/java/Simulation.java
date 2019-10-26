@@ -37,7 +37,7 @@ public class Simulation {
         System.out.println("Simulation of " + numberOfDice + "D" + sidesOfDice + " tossed " + numberOfThrows + " times.");
         System.out.println("***");
         String s = "*";
-        for (int i = numberOfDice; i < sidesOfDice * numberOfDice; i++) {
+        for (int i = numberOfDice; i <= sidesOfDice * numberOfDice; i++) {
             double per = (bins.getBin(i)/(double)numberOfThrows)*100;
             System.out.print(String.format("%2d: %7d: %2.0f percent: ", i, bins.getBin(i), per));
             for(int j = 0; j < per; j++){System.out.print("*");}
