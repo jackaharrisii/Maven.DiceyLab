@@ -15,10 +15,11 @@ public class BinsTest {
         Assert.assertEquals(2, min);
         Assert.assertEquals(12,max);
     }
-//    @Test
-//    public void UsingBinsTest(){
-//        Bins bins = new Bins(2, 12);
-//        bins.incrementBin(7);
-//        Assert.assertEquals(1, bins.getBin(7));
-//    }
+    @Test
+    public void UsingBinsTest(){
+        Bins bins = new Bins(2, 12);
+        bins.incrementBin(7);
+        int actual = bins.getBin(7);
+        Assert.assertEquals(1, actual);
+    }
 }

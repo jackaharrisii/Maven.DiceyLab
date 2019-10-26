@@ -6,15 +6,15 @@ import static org.junit.Assert.*;
 public class DiceTest {
     @Test
     public void tossAndSumTest(){
-        Dice dice = new Dice();
+        Dice dice = new Dice(2,6);
         Boolean expected = true;
         Boolean actual;
-        int dice1 = dice.tossAndSum(2, 1, 6);
+        int dice1 = dice.tossAndSum();
 //  this didn't work --->  if(dice.tossAndSum() >= 1 && dice.tossAndSum() <=6){
         // doing it this way was rolling the die twice
         //it was rolling for each comparison
         // solution was to roll before the if statement, then call the variable
-        if (dice1 >= 1 && dice1 <= 6){
+        if (dice1 >= 2 && dice1 <= 12){
             actual = true;
         }
         else { actual = false; }
@@ -22,10 +22,10 @@ public class DiceTest {
 
     @Test
     public void tossAndSumTest2(){
-        Dice dice = new Dice();
+        Dice dice = new Dice(3,8);
         Boolean expected = true;
         Boolean actual;
-        int dice1 = dice.tossAndSum(3, 1, 8);
+        int dice1 = dice.tossAndSum();
 //  this didn't work --->  if(dice.tossAndSum() >= 1 && dice.tossAndSum() <=6){
         // doing it this way was rolling the die twice
         //it was rolling for each comparison

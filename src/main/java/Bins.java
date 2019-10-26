@@ -24,7 +24,7 @@ public class Bins {
         this.counter = new int[max+1];
     }
 
-    public Integer getBin(int binIndex){
+    public int getBin(int binIndex){
         return counter[binIndex];
     }
 
