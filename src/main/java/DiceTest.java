@@ -18,6 +18,7 @@ public class DiceTest {
             actual = true;
         }
         else { actual = false; }
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
